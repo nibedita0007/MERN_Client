@@ -13,7 +13,7 @@ const UpdateTask = () => {
     useEffect(() => {
         const fetchTask = async () => {
             try {
-                const response = await axios.get(`https://mern-client-4dxg.onrender.com/api/tasks/${id}`);
+                const response = await axios.get(`https://mern-backend-lype.onrender.com/api/tasks/${id}`);
                 setTitle(response.data.title);
                 setDescription(response.data.description);
             } catch (error) {
@@ -26,7 +26,7 @@ const UpdateTask = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`https://mern-client-4dxg.onrender.com/api/edit/${id}`, { title, description });
+            await axios.put(`https://mern-backend-lype.onrender.com/api/edit/${id}`, { title, description });
             setMessage("Task updated successfully! redirecting to Home");
             setError("");
             navigate("/");
