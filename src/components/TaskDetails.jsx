@@ -11,7 +11,7 @@ const TaskDetails = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            axios.get(`http://localhost:4000/api/tasks/${id}`)
+            axios.get(`https://mern-client-4dxg.onrender.com/api/tasks/${id}`)
             .then(response => {
                 setTask(response.data);
                 setLoading(false);
@@ -25,7 +25,7 @@ const TaskDetails = () => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:4000/api/delete/${id}`);
+            await axios.delete(`https://mern-client-4dxg.onrender.com/api/delete/${id}`);
             navigate("/");
         } catch (error) {
             setError(`Error deleting task: ${error}`);
