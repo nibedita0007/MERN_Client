@@ -11,7 +11,7 @@ const AllTasks = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            axios.get('https://mern-backend-lype.onrender.com/api/tasks')
+            axios.get('https://mern-backend-2vim.onrender.com/api/tasks')
                 .then(response => {
                     setTasks(response.data);
                     setLoading(false);

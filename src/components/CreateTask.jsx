@@ -12,7 +12,7 @@ const CreateTask = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("https://mern-backend-lype.onrender.com/api/create", { title, description });
+            await axios.post("https://mern-backend-2vim.onrender.com/api/create", { title, description });
             setMessage("Task created successfully!");
             setError("");
             setTitle("");
